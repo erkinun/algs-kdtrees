@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
@@ -9,27 +10,33 @@ public class PointSET {
 
     public PointSET() {
         // construct an empty set of points
-        throw new UnsupportedOperationException("Not Implemented");
+        treeSet = new TreeSet<Point2D>();
     }
     public boolean isEmpty() {
         // is the set empty?
-        throw new UnsupportedOperationException("Not Implemented");
+        return treeSet.isEmpty();
     }
     public int size() {
         // number of points in the set
-        throw new UnsupportedOperationException("Not Implemented");
+        return treeSet.size();
     }
     public void insert(Point2D p) {
         // add the point p to the set (if it is not already in the set)
-        throw new UnsupportedOperationException("Not Implemented");
+        treeSet.add(p);
     }
     public boolean contains(Point2D p) {
         // does the set contain the point p?
-        throw new UnsupportedOperationException("Not Implemented");
+        return treeSet.contains(p);
     }
     public void draw() {
         // draw all of the points to standard draw
-        throw new UnsupportedOperationException("Not Implemented");
+
+        Iterator<Point2D> point2DIterator = treeSet.descendingIterator();
+
+        while (point2DIterator.hasNext()) {
+            Point2D point2D = point2DIterator.next();
+            StdDraw.point(point2D.x(), point2D.y());
+        }
     }
     public Iterable<Point2D> range(RectHV rect) {
         // all points in the set that are inside the rectangle
