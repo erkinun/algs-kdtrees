@@ -32,9 +32,23 @@ public class KdTree {
     }
 
     public void draw() {
-        // draw all of the points to standard draw
-        throw new UnsupportedOperationException("Not Implemented");
+        //get the depth
+
+        if (root == null) {
+            return;
+        }
+
+        drawPoint(root);
+
+        StdDraw.setPenColor(StdDraw.RED);
+        StdDraw.setPenRadius();
+        StdDraw.line(root.p.x(), 0.0, root.p.x(), 1.0);
+
+        int depth = 1;
+        drawInner(root.lb, root, depth);
+        drawInner(root.rt, root, depth);
     }
+
     public Iterable<Point2D> range(RectHV rect) {
         // all points in the set that are inside the rectangle
         throw new UnsupportedOperationException("Not Implemented");
@@ -121,5 +135,52 @@ public class KdTree {
         else {
             return node;
         }
+    }
+
+    private void drawInner(Node node, Node parent, int depth) {
+
+        //draw the node
+        if (node == null) {
+            return;
+        }
+
+        drawPoint(node);
+
+        if (depth % 2 == 0) {
+            //draw red vertical
+            StdDraw.setPenColor(StdDraw.RED);
+            StdDraw.setPenRadius();
+            if (parent.rt == node) {
+                //draw top of parent
+                StdDraw.line(node.p.x(), parent.p.y(), node.p.x(), 1.0);
+            }
+            else {
+                //draw below parent
+                StdDraw.line(node.p.x(), parent.p.y(), node.p.x(), 0.0);
+            }
+        }
+        else {
+            //draw blue horizontal
+            StdDraw.setPenColor(StdDraw.BLUE);
+            StdDraw.setPenRadius();
+
+            if (parent.rt == node) {
+                StdDraw.line(parent.p.x(), node.p.y(), 1.0, node.p.y());
+            }
+            else {
+                StdDraw.line(0.0, node.p.y(), parent.p.x(), node.p.y());
+            }
+        }
+
+        int nextDepth = depth + 1;
+
+        drawInner(node.lb, node, nextDepth);
+        drawInner(node.rt, node, nextDepth);
+    }
+
+    private void drawPoint(Node node) {
+        StdDraw.setPenColor(StdDraw.BLACK);
+        StdDraw.setPenRadius(.01);
+        StdDraw.point(node.p.x(), node.p.y());
     }
 }

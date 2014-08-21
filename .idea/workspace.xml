@@ -81,8 +81,8 @@
       <file leaf-file-name="KdTree.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/KdTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2286822" vertical-offset="1031" max-vertical-offset="1965">
-              <caret line="111" column="35" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+            <state vertical-scroll-proportion="1.2286822" vertical-offset="1991" max-vertical-offset="2880">
+              <caret line="175" column="16" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding>
                 <element signature="e#232#233#0" expanded="true" />
                 <element signature="e#267#268#0" expanded="true" />
@@ -116,7 +116,7 @@
       <file leaf-file-name="StdDraw.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/stdlib.jar!/StdDraw.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="3090">
+            <state vertical-scroll-proportion="-6.36" vertical-offset="1566" max-vertical-offset="3090">
               <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
               <folding />
             </state>
@@ -126,9 +126,11 @@
       <file leaf-file-name="StdDraw.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/stdlib.jar!/StdDraw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6045" max-vertical-offset="16905">
-              <caret line="403" column="19" selection-start-line="403" selection-start-column="14" selection-end-line="403" selection-end-column="19" />
-              <folding />
+            <state vertical-scroll-proportion="-6.269231" vertical-offset="5492" max-vertical-offset="16740">
+              <caret line="388" column="27" selection-start-line="388" selection-start-column="23" selection-end-line="388" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,8 +168,8 @@
       <file leaf-file-name="RectHV.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RectHV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1395">
-              <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+              <caret line="10" column="77" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -902,7 +904,7 @@
       <updated>1408561778516</updated>
       <workItem from="1408561782341" duration="4498000" />
       <workItem from="1408642469602" duration="17000" />
-      <workItem from="1408642833005" duration="2793000" />
+      <workItem from="1408642833005" duration="6973000" />
     </task>
     <task id="LOCAL-00001" summary="all tests are red now">
       <created>1408564645327</created>
@@ -920,11 +922,15 @@
       <created>1408645673263</created>
       <updated>1408645673263</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="contains implemented on kdtree">
+      <created>1408646216334</created>
+      <updated>1408646216334</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7308000" />
+    <option name="totallyTimeSpent" value="11488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1916" height="1058" extended-state="6" />
@@ -978,10 +984,13 @@
     <MESSAGE value="some tests passed" />
     <MESSAGE value="Merge branch 'master' of github.com:lostMohican/algs-kdtrees&#10;&#10;# By erkin.unlu&#10;# Via erkin.unlu&#10;* 'master' of github.com:lostMohican/algs-kdtrees:&#10;  starting kdtree&#10;  tests for KdTree introduced&#10;  tests and KdTree introduced&#10;  all tests on pointset green&#10;  pointset range impl&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="insert implemented on kdtree" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert implemented on kdtree" />
+    <MESSAGE value="contains implemented on kdtree" />
+    <option name="LAST_COMMIT_MESSAGE" value="contains implemented on kdtree" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1010,7 +1019,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6045" max-vertical-offset="16905">
           <caret line="403" column="19" selection-start-line="403" selection-start-column="14" selection-end-line="403" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,7 +1079,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6045" max-vertical-offset="16905">
           <caret line="403" column="19" selection-start-line="403" selection-start-column="14" selection-end-line="403" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,14 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RectHV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1335">
-          <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="7170">
@@ -1156,22 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="28170" max-vertical-offset="36720">
           <caret line="1878" column="16" selection-start-line="1878" selection-start-column="7" selection-end-line="1878" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/stdlib.jar!/StdDraw.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="3090">
-          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/stdlib.jar!/StdDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6045" max-vertical-offset="16905">
-          <caret line="403" column="19" selection-start-line="403" selection-start-column="14" selection-end-line="403" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1212,10 +1201,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/stdlib.jar!/StdDraw.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.36" vertical-offset="1566" max-vertical-offset="3090">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RectHV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/stdlib.jar!/StdDraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.269231" vertical-offset="5492" max-vertical-offset="16740">
+          <caret line="388" column="27" selection-start-line="388" selection-start-column="23" selection-end-line="388" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/KdTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2286822" vertical-offset="1031" max-vertical-offset="1965">
-          <caret line="111" column="35" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+        <state vertical-scroll-proportion="1.2286822" vertical-offset="1991" max-vertical-offset="2880">
+          <caret line="175" column="16" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
           <folding>
             <element signature="e#232#233#0" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />
