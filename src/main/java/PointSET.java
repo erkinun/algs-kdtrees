@@ -58,7 +58,23 @@ public class PointSET {
     }
     public Point2D nearest(Point2D p) {
         // a nearest neighbor in the set to p; null if set is empty
-        throw new UnsupportedOperationException("Not Implemented");
+        if (treeSet.isEmpty()) {
+            return null;
+        }
+
+        Iterator<Point2D> items = treeSet.iterator();
+        double nearestLen = Double.POSITIVE_INFINITY;
+        Point2D nearest = null;
+        while (items.hasNext()) {
+            Point2D point2D = items.next();
+
+            if (Double.compare(nearestLen, p.distanceTo(point2D)) > 0) {
+                nearestLen = p.distanceTo(point2D);
+                nearest = point2D;
+            }
+        }
+
+        return nearest;
     }
 
     public static void main(String[] args) {
