@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e80c4d-4e11-4dff-aed7-7ee2a7b394f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KdTree.java" afterPath="$PROJECT_DIR$/src/main/java/KdTree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KdTreeVisualizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kdtrees.iws" />
@@ -78,15 +79,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KdTree.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="KdTree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/KdTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2286822" vertical-offset="1991" max-vertical-offset="2880">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="2880">
               <caret line="175" column="16" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding>
                 <element signature="e#232#233#0" expanded="true" />
                 <element signature="e#267#268#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KdTreeVisualizer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/KdTreeVisualizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4828326" vertical-offset="0" max-vertical-offset="466">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,26 +156,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeSet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1845" max-vertical-offset="8175">
-              <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeMap.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home/src.zip!/java/util/TreeMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="28170" max-vertical-offset="36720">
-              <caret line="1878" column="16" selection-start-line="1878" selection-start-column="7" selection-end-line="1878" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PointSETTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PointSETTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -194,6 +195,20 @@
     </option>
     <option name="recentTasks">
       <list>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="run" />
+                </list>
+              </option>
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
         <ExternalTaskExecutionInfo>
           <option name="executorId" value="Run" />
           <option name="settings">
@@ -352,7 +367,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2817123680000" />
+        <entry key="$PROJECT_DIR$" value="2817213590000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -442,6 +457,8 @@
         <option value="$PROJECT_DIR$/src/test/java/PointSETTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/PointSET.java" />
         <option value="$PROJECT_DIR$/src/main/java/KdTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/KdTreeVisualizer.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -587,7 +604,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.kdtrees [build]">
+  <component name="RunManager" selected="Gradle.kdtrees [run]">
     <configuration default="false" name="kdtrees [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -599,6 +616,25 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <RunnerSettings RunnerId="ExternalSystemTaskRunner" />
+      <ConfigurationWrapper RunnerId="ExternalSystemTaskRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="kdtrees [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -880,12 +916,14 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Gradle.kdtrees [build]" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.kdtrees [run]" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.kdtrees [build]" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.kdtrees [run]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.kdtrees [build]" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -904,7 +942,7 @@
       <updated>1408561778516</updated>
       <workItem from="1408561782341" duration="4498000" />
       <workItem from="1408642469602" duration="17000" />
-      <workItem from="1408642833005" duration="6973000" />
+      <workItem from="1408642833005" duration="7456000" />
     </task>
     <task id="LOCAL-00001" summary="all tests are red now">
       <created>1408564645327</created>
@@ -926,11 +964,15 @@
       <created>1408646216334</created>
       <updated>1408646216334</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="draw implemented">
+      <created>1408651772657</created>
+      <updated>1408651772657</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11488000" />
+    <option name="totallyTimeSpent" value="11971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1916" height="1058" extended-state="6" />
@@ -985,7 +1027,8 @@
     <MESSAGE value="Merge branch 'master' of github.com:lostMohican/algs-kdtrees&#10;&#10;# By erkin.unlu&#10;# Via erkin.unlu&#10;* 'master' of github.com:lostMohican/algs-kdtrees:&#10;  starting kdtree&#10;  tests for KdTree introduced&#10;  tests and KdTree introduced&#10;  all tests on pointset green&#10;  pointset range impl&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="insert implemented on kdtree" />
     <MESSAGE value="contains implemented on kdtree" />
-    <option name="LAST_COMMIT_MESSAGE" value="contains implemented on kdtree" />
+    <MESSAGE value="draw implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="draw implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,14 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="330">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
@@ -1229,12 +1264,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/KdTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2286822" vertical-offset="1991" max-vertical-offset="2880">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="2880">
           <caret line="175" column="16" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
           <folding>
             <element signature="e#232#233#0" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/KdTreeVisualizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4828326" vertical-offset="0" max-vertical-offset="466">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
