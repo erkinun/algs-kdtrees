@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.TreeSet;
 
 /**
@@ -39,12 +41,40 @@ public class PointSET {
         }
     }
     public Iterable<Point2D> range(RectHV rect) {
-        // all points in the set that are inside the rectangle
-        throw new UnsupportedOperationException("Not Implemented");
+
+        Iterator<Point2D> items = treeSet.iterator();
+
+        List<Point2D> point2Ds = new ArrayList<Point2D>();
+        while (items.hasNext()) {
+            Point2D point = items.next();
+
+            if (rect.contains(point)) {
+                point2Ds.add(point);
+            }
+        }
+
+        return point2Ds;
+
     }
     public Point2D nearest(Point2D p) {
         // a nearest neighbor in the set to p; null if set is empty
-        throw new UnsupportedOperationException("Not Implemented");
+        if (treeSet.isEmpty()) {
+            return null;
+        }
+
+        Iterator<Point2D> items = treeSet.iterator();
+        double nearestLen = Double.POSITIVE_INFINITY;
+        Point2D nearest = null;
+        while (items.hasNext()) {
+            Point2D point2D = items.next();
+
+            if (Double.compare(nearestLen, p.distanceTo(point2D)) > 0) {
+                nearestLen = p.distanceTo(point2D);
+                nearest = point2D;
+            }
+        }
+
+        return nearest;
     }
 
     public static void main(String[] args) {

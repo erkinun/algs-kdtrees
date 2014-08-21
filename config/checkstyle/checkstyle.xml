@@ -259,7 +259,7 @@
 
         <!-- Check that length of line is at most 85 characters. -->
         <module name="LineLength">
-            <property name="max" value="85"/>
+            <property name="max" value="120"/>
         </module>
 
         <module name="MethodLength"/>
