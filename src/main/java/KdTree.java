@@ -3,17 +3,19 @@
  */
 public class KdTree {
 
+    private Node root;
+    private int size;
+
     public KdTree() {
         // construct an empty set of points
-        throw new UnsupportedOperationException("Not Implemented");
+        root = null;
     }
     public boolean isEmpty() {
-        // is the set empty?
-        throw new UnsupportedOperationException("Not Implemented");
+        return root == null;
     }
     public int size() {
         // number of points in the set
-        throw new UnsupportedOperationException("Not Implemented");
+        return size;
     }
     public void insert(Point2D p) {
         // add the point p to the set (if it is not already in the set)
