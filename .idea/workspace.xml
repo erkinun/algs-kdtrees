@@ -81,8 +81,8 @@
       <file leaf-file-name="KdTree.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/KdTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3449613" vertical-offset="626" max-vertical-offset="1515">
-              <caret line="88" column="55" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+            <state vertical-scroll-proportion="1.2286822" vertical-offset="1031" max-vertical-offset="1965">
+              <caret line="111" column="35" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
               <folding>
                 <element signature="e#232#233#0" expanded="true" />
                 <element signature="e#267#268#0" expanded="true" />
@@ -104,7 +104,7 @@
       <file leaf-file-name="BST.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="5235">
+            <state vertical-scroll-proportion="-11.538462" vertical-offset="705" max-vertical-offset="5235">
               <caret line="75" column="40" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -902,7 +902,7 @@
       <updated>1408561778516</updated>
       <workItem from="1408561782341" duration="4498000" />
       <workItem from="1408642469602" duration="17000" />
-      <workItem from="1408642833005" duration="2251000" />
+      <workItem from="1408642833005" duration="2793000" />
     </task>
     <task id="LOCAL-00001" summary="all tests are red now">
       <created>1408564645327</created>
@@ -916,11 +916,15 @@
       <created>1408642887840</created>
       <updated>1408642887840</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="insert implemented on kdtree">
+      <created>1408645673263</created>
+      <updated>1408645673263</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6766000" />
+    <option name="totallyTimeSpent" value="7308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1916" height="1058" extended-state="6" />
@@ -973,7 +977,8 @@
     <MESSAGE value="all tests are red now" />
     <MESSAGE value="some tests passed" />
     <MESSAGE value="Merge branch 'master' of github.com:lostMohican/algs-kdtrees&#10;&#10;# By erkin.unlu&#10;# Via erkin.unlu&#10;* 'master' of github.com:lostMohican/algs-kdtrees:&#10;  starting kdtree&#10;  tests for KdTree introduced&#10;  tests and KdTree introduced&#10;  all tests on pointset green&#10;  pointset range impl&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:lostMohican/algs-kdtrees&#10;&#10;# By erkin.unlu&#10;# Via erkin.unlu&#10;* 'master' of github.com:lostMohican/algs-kdtrees:&#10;  starting kdtree&#10;  tests for KdTree introduced&#10;  tests and KdTree introduced&#10;  all tests on pointset green&#10;  pointset range impl&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
+    <MESSAGE value="insert implemented on kdtree" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert implemented on kdtree" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1189,16 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/BST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="5235">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/KdTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="1335">
@@ -1207,10 +1202,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/BST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.538462" vertical-offset="705" max-vertical-offset="5235">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/KdTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3449613" vertical-offset="626" max-vertical-offset="1515">
-          <caret line="88" column="55" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+        <state vertical-scroll-proportion="1.2286822" vertical-offset="1031" max-vertical-offset="1965">
+          <caret line="111" column="35" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
           <folding>
             <element signature="e#232#233#0" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />

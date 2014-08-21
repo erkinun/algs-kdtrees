@@ -27,8 +27,10 @@ public class KdTree {
 
     public boolean contains(Point2D p) {
         // does the set contain the point p?
-        throw new UnsupportedOperationException("Not Implemented");
+        int depth = 0;
+        return get(root, p, depth) != null;
     }
+
     public void draw() {
         // draw all of the points to standard draw
         throw new UnsupportedOperationException("Not Implemented");
@@ -90,6 +92,34 @@ public class KdTree {
         }
         else if (comp < 0) {
             n.rt = insert(n.rt, point2D, nextDepth);
+        }
+    }
+
+    private Node get(Node node, Point2D p, int depth) {
+
+        int nextDepth = depth + 1;
+        if (depth % 2 == 0) {
+            //check x
+            int xComp = Double.compare(node.p.x(), p.x());
+            return getInner(node, p, nextDepth, xComp);
+        }
+        else {
+            //check y
+            int yComp = Double.compare(node.p.y(), p.y());
+            return  getInner(node, p, nextDepth, yComp);
+        }
+
+    }
+
+    private Node getInner(Node node, Point2D p, int nextDepth, int comp) {
+        if (comp > 0) {
+            return get(node.lb, p, nextDepth);
+        }
+        else if (comp < 0) {
+            return get(node.rt, p, nextDepth);
+        }
+        else {
+            return node;
         }
     }
 }
