@@ -22,7 +22,8 @@ public class KdTree {
 
         int depth = 0;
 
-        root = insert(root, p, depth);
+        //roots parent is null
+        root = insert(root, null,  p, depth);
     }
 
     public boolean contains(Point2D p) {
@@ -66,21 +67,75 @@ public class KdTree {
     }
 
 
-    private Node createNode(Point2D p) {
+    private Node createNode(Point2D p, Node parent, int depth) {
         Node nd = new Node();
         nd.p = p;
         nd.lb = null;
         nd.rt = null;
 
+        RectHV rect;
+        if (parent == null) {
+            //you are root
+            rect = new RectHV(0.0, 0.0, 1.0, 1.0);
+        }
+        else {
+
+            double xMin;
+            double xMax;
+            double yMin;
+            double yMax;
+
+            if (depth % 2 == 0) {
+                //if you are vertical line, check
+                int yComp = Double.compare(parent.p.y(), p.y());
+
+                xMin = parent.rect.xmin();
+                xMax = parent.rect.xmax();
+
+                if (yComp > 0) {
+                    //below rectangle
+                    //xmin parent rect xmin
+                    yMin = 0.0;
+                    yMax = parent.p.y();
+                }
+                else {
+                    //above rectange
+                    yMin = parent.p.y();
+                    yMax = 1.0;
+                }
+
+            }
+            else {
+                int xComp = Double.compare(parent.p.x(), p.x());
+
+                yMin = parent.rect.ymin();
+                yMax = parent.rect.ymax();
+
+                if (xComp > 0) {
+                    //left rectangle
+                    xMax = parent.p.x();
+                    xMin = 0.0;
+                }
+                else {
+                    //right rectange
+                    xMin = parent.p.x();
+                    xMax = 1.0;
+                }
+            }
+
+            rect = new RectHV(xMin, yMin, xMax, yMax);
+        }
+
+        nd.rect = rect;
         size++;
 
         return nd;
     }
 
-    private Node insert(Node n, Point2D point2D, int depth) {
+    private Node insert(Node n, Node parent, Point2D point2D, int depth) {
 
         if (n == null) {
-            return createNode(point2D);
+            return createNode(point2D, parent, depth);
         }
 
         int nextDepth = depth + 1;
@@ -102,10 +157,10 @@ public class KdTree {
 
     private void insertInner(Node n, Point2D point2D, int nextDepth, int comp) {
         if (comp > 0) {
-            n.lb = insert(n.lb, point2D, nextDepth);
+            n.lb = insert(n.lb, n, point2D, nextDepth);
         }
         else if (comp < 0) {
-            n.rt = insert(n.rt, point2D, nextDepth);
+            n.rt = insert(n.rt, n, point2D, nextDepth);
         }
     }
 
