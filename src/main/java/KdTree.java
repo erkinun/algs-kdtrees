@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by unlue on 21/08/14.
  */
@@ -52,8 +55,21 @@ public class KdTree {
 
     public Iterable<Point2D> range(RectHV rect) {
         // all points in the set that are inside the rectangle
-        throw new UnsupportedOperationException("Not Implemented");
+        List<Point2D> pointList = new ArrayList<Point2D>();
+
+        if (root != null && root.rect.intersects(rect)) {
+
+            if (rect.contains(root.p)) {
+                pointList.add(root.p);
+            }
+
+            innerRange(root.lb, rect, pointList);
+            innerRange(root.rt, rect, pointList);
+        }
+
+        return pointList;
     }
+
     public Point2D nearest(Point2D p) {
         // a nearest neighbor in the set to p; null if set is empty
         throw new UnsupportedOperationException("Not Implemented");
@@ -125,8 +141,6 @@ public class KdTree {
 
             rect = new RectHV(xMin, yMin, xMax, yMax);
         }
-
-        StdOut.println(rect);
 
         nd.rect = rect;
         size++;
@@ -230,5 +244,24 @@ public class KdTree {
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.setPenRadius(.01);
         StdDraw.point(node.p.x(), node.p.y());
+    }
+
+    private void innerRange(Node node, RectHV rect, List<Point2D> pointList) {
+
+        if (node == null) {
+            return;
+        }
+
+        if (rect.contains(node.p)) {
+            pointList.add(node.p);
+        }
+
+        if (node.lb != null && node.lb.rect.intersects(rect)) {
+            innerRange(node.lb, rect, pointList);
+        }
+
+        if (node.rt != null && node.rt.rect.intersects(rect)) {
+            innerRange(node.rt, rect, pointList);
+        }
     }
 }
