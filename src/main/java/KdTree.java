@@ -46,8 +46,8 @@ public class KdTree {
         StdDraw.line(root.p.x(), 0.0, root.p.x(), 1.0);
 
         int depth = 1;
-        drawInner(root.lb, root, depth);
-        drawInner(root.rt, root, depth);
+        drawInner(root.lb, depth);
+        drawInner(root.rt, depth);
     }
 
     public Iterable<Point2D> range(RectHV rect) {
@@ -95,13 +95,13 @@ public class KdTree {
                 if (yComp > 0) {
                     //below rectangle
                     //xmin parent rect xmin
-                    yMin = 0.0;
+                    yMin = parent.rect.ymin();
                     yMax = parent.p.y();
                 }
                 else {
                     //above rectange
                     yMin = parent.p.y();
-                    yMax = 1.0;
+                    yMax = parent.rect.ymax();
                 }
 
             }
@@ -114,17 +114,19 @@ public class KdTree {
                 if (xComp > 0) {
                     //left rectangle
                     xMax = parent.p.x();
-                    xMin = 0.0;
+                    xMin = parent.rect.xmin();
                 }
                 else {
                     //right rectange
                     xMin = parent.p.x();
-                    xMax = 1.0;
+                    xMax = parent.rect.xmax();
                 }
             }
 
             rect = new RectHV(xMin, yMin, xMax, yMax);
         }
+
+        StdOut.println(rect);
 
         nd.rect = rect;
         size++;
@@ -192,7 +194,7 @@ public class KdTree {
         }
     }
 
-    private void drawInner(Node node, Node parent, int depth) {
+    private void drawInner(Node node, int depth) {
 
         //draw the node
         if (node == null) {
@@ -205,32 +207,23 @@ public class KdTree {
             //draw red vertical
             StdDraw.setPenColor(StdDraw.RED);
             StdDraw.setPenRadius();
-            if (parent.rt == node) {
-                //draw top of parent
-                StdDraw.line(node.p.x(), parent.p.y(), node.p.x(), 1.0);
-            }
-            else {
-                //draw below parent
-                StdDraw.line(node.p.x(), parent.p.y(), node.p.x(), 0.0);
-            }
+
+            StdDraw.line(node.p.x(), node.rect.ymin(), node.p.x(), node.rect.ymax());
+
         }
         else {
             //draw blue horizontal
             StdDraw.setPenColor(StdDraw.BLUE);
             StdDraw.setPenRadius();
 
-            if (parent.rt == node) {
-                StdDraw.line(parent.p.x(), node.p.y(), 1.0, node.p.y());
-            }
-            else {
-                StdDraw.line(0.0, node.p.y(), parent.p.x(), node.p.y());
-            }
+            StdDraw.line(node.rect.xmin(), node.p.y(), node.rect.xmax(), node.p.y());
+
         }
 
         int nextDepth = depth + 1;
 
-        drawInner(node.lb, node, nextDepth);
-        drawInner(node.rt, node, nextDepth);
+        drawInner(node.lb, nextDepth);
+        drawInner(node.rt, nextDepth);
     }
 
     private void drawPoint(Node node) {
