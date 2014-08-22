@@ -72,7 +72,14 @@ public class KdTree {
 
     public Point2D nearest(Point2D p) {
         // a nearest neighbor in the set to p; null if set is empty
-        throw new UnsupportedOperationException("Not Implemented");
+
+        if (root == null) {
+            return null;
+        }
+
+        double nearestCurrent = root.p.distanceTo(p);
+
+        return nearestInnert(p, root, nearestCurrent);
     }
 
     private static class Node {
@@ -263,5 +270,35 @@ public class KdTree {
         if (node.rt != null && node.rt.rect.intersects(rect)) {
             innerRange(node.rt, rect, pointList);
         }
+    }
+
+    private Point2D nearestInnert(Point2D p, Node node, double currentNearest) {
+
+        Point2D nearest = node.p;
+
+        double leftDist = Double.POSITIVE_INFINITY;
+        if (node.lb != null) {
+            leftDist = node.lb.p.distanceTo(p);
+        }
+
+        double rightDist = Double.POSITIVE_INFINITY;
+        if (node.rt != null) {
+            rightDist = node.rt.p.distanceTo(p);
+        }
+
+        if (Double.compare(currentNearest, leftDist) <= 0
+                && Double.compare(currentNearest, rightDist) <= 0) {
+            return nearest;
+        }
+
+        if (Double.compare(leftDist, rightDist) <= 0) {
+            nearest = nearestInnert(p, node.lb, leftDist);
+        }
+        else {
+            nearest = nearestInnert(p, node.rt, rightDist);
+        }
+
+        return nearest;
+
     }
 }

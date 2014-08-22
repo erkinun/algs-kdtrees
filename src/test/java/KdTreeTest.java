@@ -89,4 +89,46 @@ public class KdTreeTest {
 
         Assert.assertTrue(nearest.equals(point1));
     }
+
+    @Test
+    public void testAnotherNearest() throws Exception {
+        Point2D point1 = new Point2D(0.10, 0.10);
+        kdTree.insert(point1);
+        Point2D point2 = new Point2D(0.20, 0.20);
+        kdTree.insert(point2);
+        Point2D point3 = new Point2D(0.30, 0.30);
+        kdTree.insert(point3);
+        Point2D point4 = new Point2D(2.00, 0.00);
+        kdTree.insert(point4);
+
+        Point2D nearest = kdTree.nearest(new Point2D(2.00, 0.11));
+
+        Assert.assertTrue(nearest.equals(point4));
+    }
+
+    @Test
+    public void testAnotherNearestTooMany() throws Exception {
+        Point2D point1 = new Point2D(0.10, 0.10);
+        kdTree.insert(point1);
+        Point2D point2 = new Point2D(0.20, 0.20);
+        kdTree.insert(point2);
+        Point2D point3 = new Point2D(0.30, 0.30);
+        kdTree.insert(point3);
+        Point2D point4 = new Point2D(0.40, 0.40);
+        kdTree.insert(point4);
+        Point2D point5 = new Point2D(0.50, 0.50);
+        kdTree.insert(point5);
+        Point2D point6 = new Point2D(0.60, 0.60);
+        kdTree.insert(point6);
+        Point2D point7 = new Point2D(0.70, 0.70);
+        kdTree.insert(point7);
+        Point2D point8 = new Point2D(0.80, 0.80);
+        kdTree.insert(point8);
+        Point2D point9 = new Point2D(0.90, 0.90);
+        kdTree.insert(point9);
+
+        Point2D nearest = kdTree.nearest(new Point2D(0.60, 0.59));
+
+        Assert.assertTrue(nearest.equals(point6));
+    }
 }
