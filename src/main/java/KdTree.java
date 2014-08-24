@@ -31,6 +31,11 @@ public class KdTree {
 
     public boolean contains(Point2D p) {
         // does the set contain the point p?
+
+        if (root == null) {
+            return false;
+        }
+
         int depth = 0;
         return get(root, p, depth) != null;
     }
@@ -205,9 +210,19 @@ public class KdTree {
 
     private Node getInner(Node node, Point2D p, int nextDepth, int comp) {
         if (comp > 0) {
+
+            if (node.lb == null) {
+                return null;
+            }
+
             return get(node.lb, p, nextDepth);
         }
         else if (comp < 0) {
+
+            if (node.rt == null) {
+                return null;
+            }
+
             return get(node.rt, p, nextDepth);
         }
         else {

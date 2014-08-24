@@ -52,6 +52,16 @@ public class KdTreeTest {
     }
 
     @Test
+    public void testContainsNot() throws Exception {
+        Point2D point2D = new Point2D(0.00, 0.00);
+        kdTree.insert(point2D);
+
+        Point2D point2DNot = new Point2D(1.0, 1.0);
+
+        Assert.assertFalse(kdTree.contains(point2DNot));
+    }
+
+    @Test
     public void testDraw() throws Exception {
 
     }
