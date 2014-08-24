@@ -167,6 +167,11 @@ public class KdTree {
             return createNode(point2D, parent, depth);
         }
 
+        if (n.p.equals(point2D)) {
+            //we already have the same node
+            return n;
+        }
+
         int nextDepth = depth + 1;
 
         if (depth % 2 == 0) {
