@@ -26,11 +26,15 @@ public class RangeSearchVisualizer {
         // initialize the data structures with N points from standard input
         PointSET brute = new PointSET();
         KdTree kdtree = new KdTree();
+        int elemCount = 1;
         while (!in.isEmpty()) {
             double x = in.readDouble();
             double y = in.readDouble();
             Point2D p = new Point2D(x, y);
             kdtree.insert(p);
+            StdOut.println("elem count: " + elemCount);
+            StdOut.println("tree count: " + kdtree.size());
+            elemCount++;
             brute.insert(p);
         }
 

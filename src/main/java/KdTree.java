@@ -12,6 +12,7 @@ public class KdTree {
     public KdTree() {
         // construct an empty set of points
         root = null;
+        size = 0;
     }
     public boolean isEmpty() {
         return root == null;
@@ -187,7 +188,7 @@ public class KdTree {
         if (comp > 0) {
             n.lb = insert(n.lb, n, point2D, nextDepth);
         }
-        else if (comp < 0) {
+        else if (comp <= 0) {
             n.rt = insert(n.rt, n, point2D, nextDepth);
         }
     }
