@@ -14,6 +14,7 @@ public class KdTree {
         root = null;
         size = 0;
     }
+
     public boolean isEmpty() {
         return root == null;
     }
@@ -83,9 +84,8 @@ public class KdTree {
             return null;
         }
 
-        double nearestCurrent = root.p.distanceTo(p);
-
-        return nearestInnert(p, root, nearestCurrent);
+        //last as the current nearest
+        return nearestInner(p, root, root);
     }
 
     private static class Node {
@@ -294,33 +294,39 @@ public class KdTree {
         }
     }
 
-    private Point2D nearestInnert(Point2D p, Node node, double currentNearest) {
+    private Point2D nearestInner(Point2D p, Node node, Node nearest) {
 
-        Point2D nearest = node.p;
+        Node newNearest;
+
+        if (Double.compare(node.p.distanceSquaredTo(p), nearest.p.distanceSquaredTo(p)) < 0) {
+            newNearest = node;
+        }
+        else {
+            newNearest = nearest;
+        }
+
+        double currentNearest = newNearest.p.distanceSquaredTo(p);
 
         double leftDist = Double.POSITIVE_INFINITY;
         if (node.lb != null) {
-            leftDist = node.lb.p.distanceTo(p);
+            leftDist = node.lb.rect.distanceSquaredTo(p);
         }
 
         double rightDist = Double.POSITIVE_INFINITY;
         if (node.rt != null) {
-            rightDist = node.rt.p.distanceTo(p);
+            rightDist = node.rt.rect.distanceSquaredTo(p);
         }
 
         if (Double.compare(currentNearest, leftDist) <= 0
                 && Double.compare(currentNearest, rightDist) <= 0) {
-            return nearest;
+            return newNearest.p;
         }
 
-        if (Double.compare(leftDist, rightDist) <= 0) {
-            nearest = nearestInnert(p, node.lb, leftDist);
+        if (Double.compare(leftDist, rightDist) < 0) {
+            return nearestInner(p, node.lb, newNearest);
         }
         else {
-            nearest = nearestInnert(p, node.rt, rightDist);
+            return nearestInner(p, node.rt, newNearest);
         }
-
-        return nearest;
-
     }
 }
