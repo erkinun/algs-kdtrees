@@ -200,6 +200,10 @@ public class KdTree {
 
     private Node get(Node node, Point2D p, int depth) {
 
+        if (node.p.equals(p)) {
+            return node;
+        }
+
         int nextDepth = depth + 1;
         if (depth % 2 == 0) {
             //check x
@@ -223,16 +227,13 @@ public class KdTree {
 
             return get(node.lb, p, nextDepth);
         }
-        else if (comp < 0) {
+        else { //if (comp <= 0)
 
             if (node.rt == null) {
                 return null;
             }
 
             return get(node.rt, p, nextDepth);
-        }
-        else {
-            return node;
         }
     }
 
